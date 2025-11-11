@@ -17,9 +17,9 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Install Deno
-      run: curl -fsSL https://deno.land/install.sh | sh && echo "Y" && echo "Y"
+      run: curl -fsSL https://deno.land/install.sh | sh 
     - name: Install Deno Deps
-      run: deno run -A scripts/download_deps.ts -y
+      run: /home/runner/.deno/bin/deno run -A scripts/download_deps.ts -y
     - name: Copy build.properties
       run: cp stoatbuild.properties.example stoatbuild.properties
     - name: Copy sentry.properties
